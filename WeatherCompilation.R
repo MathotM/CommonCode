@@ -37,6 +37,8 @@ View(CompiledRaw_Weather[is.na(CompiledRaw_Weather$Time),])
 WeatherDataCompiled<-unique(CompiledRaw_Weather[!is.na(CompiledRaw_Weather$Time),!colnames(CompiledRaw_Weather)==c("Name")])
 summary(WeatherDataCompiled)
 
+summary(WeatherDataCompiled)
+
 write.table(WeatherDataCompiled,file=paste(PathRawDataWeather,WeatherCompiledName,sep=c("/")),row.names = FALSE,dec=c(","),sep=c(";"))
 
 
